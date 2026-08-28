@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Golden Unlock GSM — Réparation & Solutions GSM</title>
+<meta name="description" content="Golden Unlock GSM — réparation, déblocage et solutions GSM.">
+<style>
+:root{--bg:#05070a;--card:#0d141c;--line:#202c38;--txt:#f5f7f9;--muted:#98a5b2;--blue:#1688ff;--green:#55df20;--silver:#d7dbe0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 0,#082044 0,#05070a 38%);color:var(--txt);font-family:Arial,system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:9;background:#05070aee;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;line-height:.9}.logo .g{color:var(--silver);font-size:17px}.logo .u{color:var(--blue);font-size:21px}.logo .gsm{color:var(--green)}.links{display:flex;gap:20px;font-size:13px}.links a{color:#d9e0e5;text-decoration:none}.btn{border:1px solid var(--line);background:#0d141c;color:#fff;padding:12px 17px;border-radius:12px;font-weight:800}.primary{background:#1688ff;border:0}.green{background:#168d55;border:0}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;padding:85px 0 65px}.tag{color:#66b8ff;border:1px solid #1264b6;padding:7px 12px;border-radius:30px;font-size:12px}.hero h1{font-size:clamp(46px,7vw,78px);line-height:.9;margin:20px 0}.hero h1 .g{color:var(--silver)}.hero h1 .u{color:var(--blue)}.hero h1 .gsm{color:var(--green)}.hero p,.sub{color:var(--muted);line-height:1.7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.visual{height:400px;border:1px solid #1c2a39;border-radius:28px;background:radial-gradient(circle,#102c50,#080d13 62%);display:grid;place-items:center;position:relative;overflow:hidden}.phone{font-size:125px;filter:drop-shadow(0 0 30px #1688ff)}.ring{position:absolute;width:330px;height:150px;border:6px solid #1688ff;border-left-color:transparent;border-right-color:transparent;border-radius:50%;transform:rotate(-15deg)}.ring2{border-color:#55df20;border-left-color:transparent;transform:rotate(15deg)}
+section{padding:55px 0}.title{font-size:34px;margin:0 0 8px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}.card{background:linear-gradient(145deg,#0e151d,#090e14);border:1px solid var(--line);border-radius:18px;padding:21px}.icon{font-size:34px}.card p{color:var(--muted);line-height:1.5}.price{color:var(--green);font-weight:900;font-size:19px}.steps{grid-template-columns:repeat(4,1fr)}.step b{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:#102a48;color:#70bdff}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);margin-top:20px}
+.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;z-index:20;padding:20px}.modal.show{display:grid}.box{width:min(480px,100%);background:#0b1118;border:1px solid var(--line);border-radius:22px;padding:25px;max-height:90vh;overflow:auto}.field{margin:12px 0}.field label{display:block;font-size:13px;margin-bottom:6px;color:#cbd5dc}.field input,.field select,.field textarea{width:100%;background:#070c12;border:1px solid #26323e;color:#fff;padding:12px;border-radius:10px}.close{float:right;border:0;background:none;color:#aaa;font-size:25px}.msg{margin:10px 0;padding:10px;border-radius:9px;background:#10250b;color:#9bf070;display:none}.orders{margin-top:15px}.order{border:1px solid var(--line);padding:15px;border-radius:12px;margin:8px 0}.status{color:#70bdff;font-weight:800}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:50px}.grid,.steps{grid-template-columns:1fr}.visual{height:300px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a href="#" onclick="home();return false" class="logo"><span class="g">GOLDEN</span><br><span class="u">UNLOCK <span class="gsm">GSM</span></span></a><div class="links"><a href="#services">SERVICES</a><a href="#" onclick="openOrder();return false">COMMANDER</a><a href="#" onclick="openAccount();return false">MON COMPTE</a></div><button class="btn primary" onclick="openOrder()">COMMANDER</button></div></nav>
+
+<main>
+<section class="wrap hero"><div><span class="tag">GOLDEN UNLOCK GSM</span><h1><span class="g">GOLDEN</span><br><span class="u">UNLOCK</span> <span class="gsm">GSM</span></h1><h2>RÉPARATION & SOLUTIONS GSM</h2><p>Une plateforme moderne pour demander des services de réparation, déblocage et solutions GSM.</p><div class="actions"><button class="btn primary" onclick="openOrder()">📦 PASSER UNE COMMANDE</button><button class="btn" onclick="openAccount()">👤 CRÉER UN COMPTE</button></div></div><div class="visual"><div class="ring"></div><div class="ring ring2"></div><div class="phone">📱</div></div></section>
+
+<section id="services" class="wrap"><h2 class="title">Nos services</h2><p class="sub">Des solutions professionnelles pour vos appareils.</p><div class="grid" id="serviceGrid"></div></section>
+
+<section class="wrap"><h2 class="title">Comment ça marche ?</h2><p class="sub">Simple, rapide et transparent.</p><div class="grid steps"><div class="card step"><b>1</b><h3>Créer un compte</h3><p>Inscrivez-vous en quelques secondes.</p></div><div class="card step"><b>2</b><h3>Choisir un service</h3><p>Sélectionnez la solution adaptée.</p></div><div class="card step"><b>3</b><h3>Passer commande</h3><p>Donnez les informations de votre appareil.</p></div><div class="card step"><b>4</b><h3>Suivre</h3><p>Conservez votre numéro de commande.</p></div></div></section>
+</main>
+<footer><div class="wrap"><strong style="color:#d7dbe0">GOLDEN</strong> <strong style="color:#1688ff">UNLOCK</strong> <strong style="color:#55df20">GSM</strong><p>Réparation & Solutions GSM · WhatsApp : +509 XX XX XX XX · contact@goldenunlockgsm.com</p><small>© 2026 Golden Unlock GSM. Tous droits réservés.</small></div></footer>
+
+<div class="modal" id="account"><div class="box"><button class="close" onclick="closeModals()">×</button><h2>Créer un compte</h2><p class="sub">Votre espace client Golden Unlock GSM.</p><form onsubmit="register(event)"><div class="field"><label>Prénom</label><input id="first" required></div><div class="field"><label>Nom</label><input id="last" required></div><div class="field"><label>E-mail</label><input id="email" type="email" required></div><div class="field"><label>Téléphone / WhatsApp</label><input id="phone" required></div><div class="field"><label>Mot de passe</label><input id="pass" type="password" minlength="8" required></div><div class="msg" id="accountMsg"></div><button class="btn green" style="width:100%">CRÉER MON COMPTE</button></form></div></div>
+
+<div class="modal" id="order"><div class="box"><button class="close" onclick="closeModals()">×</button><h2>Passer une commande</h2><p class="sub">Remplissez les informations de votre appareil.</p><form onsubmit="createOrder(event)"><div class="field"><label>Service</label><select id="service" required></select></div><div class="field"><label>Marque</label><input id="brand" placeholder="Samsung, Apple..." required></div><div class="field"><label>Modèle</label><input id="model" placeholder="Galaxy S21, iPhone 11..." required></div><div class="field"><label>IMEI / N° de série</label><input id="imei"></div><div class="field"><label>Opérateur</label><input id="operator" placeholder="Digicel, Natcom..."></div><div class="field"><label>Problème / détails</label><textarea id="problem" rows="4"></textarea></div><div class="msg" id="orderMsg"></div><button class="btn primary" style="width:100%">ENVOYER LA COMMANDE</button></form><div class="orders" id="orders"></div></div></div>
+
+<script>
+const services=[
+["🔓","Déblocage / Unlock","Déblocage réseau selon le modèle et l'opérateur.",15],
+["🤖","Services Android","Solutions logicielles Android autorisées.",10],
+["","Services iPhone","Diagnostic et assistance logicielle iPhone.",25],
+["🛠️","Réparation téléphone","Écran, batterie, connecteur et autres réparations.",0],
+["📟","Réparation IMEI","Assistance pour problèmes d'IMEI selon la législation.",20],
+["🛒","Accessoires GSM","Câbles, chargeurs, écouteurs et accessoires.",0]
+];
+let user=JSON.parse(localStorage.getItem("gugsm_user")||"null");
+let orders=JSON.parse(localStorage.getItem("gugsm_orders")||"[]");
+
+function renderServices(){document.getElementById("serviceGrid").innerHTML=services.map((s,i)=>`<div class="card"><div class="icon">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><div class="price">${s[3]?s[3]+" $":"Sur devis"}</div><button class="btn" style="margin-top:12px" onclick="openOrder(${i})">Commander</button></div>`).join("");document.getElementById("service").innerHTML=services.map((s,i)=>`<option value="${i}">${s[0]} ${s[1]} — ${s[3]?s[3]+" $":"Sur devis"}</option>`).join("")}
+function openAccount(){document.getElementById("account").classList.add("show");document.getElementById("accountMsg").style.display="none"}
+function openOrder(i=0){if(!user){openAccount();return}document.getElementById("service").value=i;document.getElementById("order").classList.add("show");showOrders()}
+function closeModals(){document.querySelectorAll(".modal").forEach(x=>x.classList.remove("show"))}
+function register(e){e.preventDefault();user={first:document.getElementById("first").value,last:document.getElementById("last").value,email:document.getElementById("email").value,phone:document.getElementById("phone").value};localStorage.setItem("gugsm_user",JSON.stringify(user));document.getElementById("accountMsg").textContent="✓ Compte créé avec succès.";document.getElementById("accountMsg").style.display="block";setTimeout(()=>{closeModals();openOrder()},700)}
+function createOrder(e){e.preventDefault();const i=+document.getElementById("service").value;const id="GUGSM-"+Date.now().toString(36).toUpperCase();const o={id,service:services[i][1],brand:document.getElementById("brand").value,model:document.getElementById("model").value,status:"Reçue",date:new Date().toLocaleString()};orders.unshift(o);localStorage.setItem("gugsm_orders",JSON.stringify(orders));document.getElementById("orderMsg").textContent="✓ Commande "+id+" envoyée.";document.getElementById("orderMsg").style.display="block";e.target.reset();showOrders()}
+function showOrders(){document.getElementById("orders").innerHTML=orders.length?`<h3>Mes commandes</h3>`+orders.map(o=>`<div class="order"><b>${o.id}</b><br>${o.service} · ${o.brand} ${o.model}<br><span class="status">● ${o.status}</span><br><small>${o.date}</small></div>`).join(""):""}
+function home(){window.scrollTo({top:0,behavior:"smooth"})}
+renderServices();
+</script>
+</body>
+</html>
